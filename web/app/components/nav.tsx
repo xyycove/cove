@@ -27,7 +27,7 @@ export function Nav() {
     },
   ];
   return (
-    <div className="none-srollbar flex h-screen w-18 flex-col items-center gap-2 overflow-auto bg-gray-100 py-3">
+    <div className="none-srollbar flex h-screen w-18 shrink-0 flex-col items-center gap-2 overflow-auto bg-gray-100 py-3">
       <Home />
       <div className="none-srollbar flex w-full flex-1 flex-col items-center gap-2 overflow-auto">
         {avatars.map((avatar, index) => {

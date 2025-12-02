@@ -4,10 +4,12 @@ import { Aside } from "@/components/aside";
 import { Login } from "@/components/login";
 export default function Layout() {
   return (
-    <div className="flex">
+    <div className="flex h-screen overflow-hidden">
       <Nav />
       <Aside />
-      <Outlet />
+      <div className="flex-1 overflow-auto">
+        <Outlet />
+      </div>
       <Login />
     </div>
   );

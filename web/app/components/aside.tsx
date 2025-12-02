@@ -1,5 +1,3 @@
 export function Aside() {
-  return <div className="w-60 bg-gray-50 h-screen">
-    aside
-  </div>
+  return <div className="h-screen w-60 shrink-0 bg-gray-50">aside</div>;
 }
