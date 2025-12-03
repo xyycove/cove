@@ -1,4 +1,5 @@
-import { Link } from "react-router";
+"use client";
+import Link from 'next/link'
 import { useAtom } from "jotai";
 import { loginAtom } from "@/hooks/login";
 
@@ -46,7 +47,7 @@ export function Nav() {
 function Home() {
   return (
     <Link
-      to="/"
+      href="/"
       className="flex h-10 w-10 shrink-0 cursor-pointer items-center justify-center rounded-xl bg-indigo-500"
     >
       <svg

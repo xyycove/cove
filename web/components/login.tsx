@@ -1,5 +1,6 @@
+"use client"
 import { useState, useEffect } from "react";
-import { Link } from "react-router";
+import Link from 'next/link'
 import { useAtom } from "jotai";
 import { loginAtom } from "@/hooks/login";
 export function Login() {
@@ -81,7 +82,7 @@ export function Login() {
         <div className="text-center text-sm text-gray-500">
           登录/注册即代表同意
           <Link
-            to="/user-agreement"
+            href="/user-agreement"
             target="_blank"
             className="mx-1 hover:underline"
           >
@@ -89,7 +90,7 @@ export function Login() {
           </Link>
           和
           <Link
-            to="/privacy-policy"
+            href="/privacy-policy"
             target="_blank"
             className="ml-1 hover:underline"
           >
