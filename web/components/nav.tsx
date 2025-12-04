@@ -1,5 +1,6 @@
 "use client";
 import Link from 'next/link'
+import Image from 'next/image';
 import { useAtom } from "jotai";
 import { loginAtom } from "@/hooks/login";
 
@@ -34,7 +35,7 @@ export function Nav() {
         {avatars.map((avatar, index) => {
           return (
             <div key={index}>
-              <img src={avatar.url} className="h-10 w-10 rounded-xl" />
+              <Image src={avatar.url} alt='index' width={40} height={40} unoptimized className="rounded-xl" />
             </div>
           );
         })}
@@ -69,7 +70,7 @@ function Home() {
 }
 
 function Login() {
-  const [show, setShow] = useAtom(loginAtom);
+  const [, setShow] = useAtom(loginAtom);
   return (
     <div
       onClick={() => setShow(true)}
