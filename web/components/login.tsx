@@ -1,11 +1,12 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
-import Link from 'next/link'
+import Link from "next/link";
 import { useAtom } from "jotai";
-import { loginAtom } from "@/hooks/login";
+import { loginAtom } from "@/stores/login";
 export function Login() {
   const [show, setShow] = useAtom(loginAtom);
   const [type, setType] = useState("sms");
+  const [phone, setPhone] = useState("");
   const [countdown, setCountdown] = useState(0);
 
   useEffect(() => {
@@ -47,7 +48,13 @@ export function Login() {
         </div>
         <div className="flex flex-col gap-1">
           <div>手机号</div>
-          <input maxLength={11} type="text" />
+          <input
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            maxLength={11}
+            autoFocus
+            type="text"
+          />
         </div>
         {type == "sms" ? (
           <div className="flex flex-col gap-1">

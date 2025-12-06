@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import Image from 'next/image';
 import { useAtom } from "jotai";
-import { loginAtom } from "@/hooks/login";
+import { loginAtom } from "@/stores/login";
 
 export function Nav() {
   const avatars = [
