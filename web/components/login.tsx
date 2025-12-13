@@ -3,9 +3,12 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useAtom } from "jotai";
 import { loginAtom } from "@/stores/login";
+
+type Type = "sms" | "pwd"
+
 export function Login() {
   const [show, setShow] = useAtom(loginAtom);
-  const [type, setType] = useState("sms");
+  const [type, setType] = useState<Type>("sms");
   const [phone, setPhone] = useState("");
   const [countdown, setCountdown] = useState(0);
 
